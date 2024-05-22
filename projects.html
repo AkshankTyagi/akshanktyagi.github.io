@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Akshank Tyagi: Resaerch Projects</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+        function toggleContent(...ids) {
+            ids.forEach(id => {
+                var content = document.getElementById('more-content-' + id);
+                var btn = document.getElementById('show-more-btn-' + ids[0]);
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                    btn.innerHTML = "Show Less";
+                } else {
+                    content.style.display = "none";
+                    btn.innerHTML = "Show More";
+                }
+            });
+        }
+        </script>
+    </head>
+    
+    <body>
+    
+        <header>
+            <h1>
+                <img src="./img/IISc_Master_Seal_white.png" alt="Logo"><br>
+                Research projects&nbsp;
+            </h1>
+        </header>
+
+        <nav>
+            <a href="index.html">About Me</a>
+            <!-- <a href="#education">Education</a> -->
+            <a href="talks.html">Talks</a>
+            <a href="projects.html">Projects</a>
+            <a href="photos.html">Photos</a>
+        </nav>
+
+        <body>
+            <div class="container">
+                
+                <!-- <div class="main-section project">
+                    <h2>Early Universe Cosmology</h2>
+                    <p class="guide">Guide: Tarun Deep Saini</p>
+                    <p class="date">June 2024</p>
+                </div> -->
+        
+                <div class="main-section project">
+                    <h2>Hunting QCD Axion dark matter using gravitational microlensing</h2>
+                    <p class="guide">Guide: Manish Kumar Tamta, PhD IISc</p>
+                    <p class="date">May 2024</p>
+                    <p>I was selected for the KSP 5.0 (Krittika Summer Projects by Krittika @ IIT Bombay) and chose this project as per my preference.</p>
+                </div>
+        
+                <div class="main-section project">
+                    <h2>UV Sky Simulation for Space Missions</h2>
+                    <p class="guide">Guide: Jayant Murthy, Rekhesh Mohan from IIA Bangalore</p>
+                    <p class="date">Jan 2024 -- Present</p>
+
+                    <p> I am currently working on a sky simulations project for UV space missions for spectrometry simulations of the sky observed by a satellite in Earth orbit.</p>
+                    <p id="more-content-1" class="more-content"> 
+                        Using the TLE for any given Satellite, I can generate its orbit around earth to observe the stellar sky within a given field of view of a detector on the Satellite.<br>
+                        I use the Hipparcos catalogue to obtain stars in the field of view and their observed astrometric and photometric data. Then we find the stars Temperature, radius, effective Gravity and Distance to the star using this info.<br>
+                        I use these to then find intrinsic Spectra of each star from the Castelli-Kurucz Atlas. then convert this to observed spectrum by the satellite and animating a simulation to show the satellite orbit, stars in field of view and their UV Spectra.<br>
+                        Further I added Cosmic diffused UV background from the Interstellar dust Scattering of UV light to the Simulation. I am now working to display spectrum of the diffused background and adding zodiacal UV light to the FOV.<br>                        
+                        <img src="./img/ISS_satellite.gif" alt="Simulation outputfoe=r ISS">
+                    </p>
+                    <span id="show-more-btn-1" class="show-more-btn" onclick="toggleContent(1)">Show More</span>
+                    <br>
+                    <a href="https://indianinstituteofscience-my.sharepoint.com/:p:/g/personal/akshanktyagi_iisc_ac_in/EeMBuMTkGa5EuLyHzR2Wap4BtRnMos0gcz8mosPVE8Z9vg?e=yuqaja" target="_blank">View Presentation</a>
+                    <a href="https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/akshanktyagi_iisc_ac_in/EdUf2Z0PK0tGmCjcVZQ5wdIBY_eFF7zdY-PhElAzdiBgXg?e=Y5jtML" target="_blank">View Project Report</a>
+                    <a href="https://github.com/spg-iiap/UV-Sky-Simulation" target="_blank">GitHub Repository</a>
+                </div>
+                
+                <div class="main-section project">
+                    <h2>Big Bang Nucleosynthesis</h2>
+                    <p class="guide">Guide: Nirmal Raj from CHEP, IISc Bangalore</p>
+                    <p class="date">May 2023 -- July 2023</p>
+
+                    <p>I worked on recreating the results of the Big Bang Nucleosynthesis, "Schramm Plot" for D, He-4 and He-3 abundances during BBN.</p>
+                    <div id="more-content-2" class="more-content about">
+                        <div>
+                        We started with creating a figure from Turner et al, 2021 which shows Temperature dependencies of Key processes during BBN vs a range of Baryon to Photon ratio to understand the Time Scale and Temperature scale of BBN.<br>I created the plot for Universe Temperature (0.005 to 2 MeV) along with a parallel time axis that ranged (1e-1 to 1e+4 Sec) after Big Bang, against the Baryon to Photon ratio of the universe in range ( 5e-12 to 6e-7). This shows the dependence of Temperature at which Coulombic forces prevent Nucleosynthesis on BtoP ratio and gives the Time range for BBN in our universe with the fixed BtoP Ratio = 6.03e-10.
+                        <br><img class="center-img" src="./img/BBN Temperatures.png" alt="Key Temperatures of universe vs Photon to baryon ratio"></div>
+                    </div>
+                    <div id="more-content-3" class="more-content about">
+                        <div>
+                        Then I studied the Densities of radiation, Baryonic, Dark matter and Vacuum energy as function of the inverse Scale factor of the universe and plotted these densities.<br>This allowed me to study when the Universe shifted from a radiation dominated to matter dominated to Vacuum energy dominated. Then we added the BBN Start and End times to obtain the density ratios of the universe during BBN.
+                        <br><img class="center-img" src="./img/Densities_advanced.png" alt="Densities of Universe Constituents with Inverse Scale factor"></div>
+                    </div>
+                    <div id="more-content-4" class="more-content about">
+                        <div>
+                        Further We solved Friedman equation and the density & entropy conditions during the radiation dominated era of BBN to obtain the exact time, temperature and scale factor history of the universe referenced from Fuller et al (2023). And also made a theoretical study of Neutrino decoupling.  
+                        </div><br>
+                    </div>
+                    <div id="more-content-5" class="more-content about">
+                        <div>
+                        Then I evolved Neutron & Proton abundances as a function of Temperature inverse after Neutrino decoupling using beta process rates from Serpico et al (2004). Then we obtained the Freeze-in ratio of Protons to Neutrons in the Universe at the start of BBN. This ratio when used in all Nuclear Fusion reaction rates from Cyburt et al (2004) gave us the abundances of all the light elements formed in the BBN
+                        <br><img class="center-img" src="./img/neutron-proton_ratio.png" alt="Neutron-Proton Ratio with Inverse Temperature"></div>
+                    </div>
+                    <span id="show-more-btn-2" class="show-more-btn" onclick="toggleContent(2,3,4,5)">Show More</span>
+                    <br>
+                    <a href="https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/akshanktyagi_iisc_ac_in/EaON23yK21xEpYOvv65k3sMBnXuJCvUA3Eqf0MMb80Zjww?e=kvf994" target="_blank">View Presentation</a>
+                </div>
+            </div>
+        </body>
+        </html>
