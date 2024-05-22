@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website of a Science Student</title>
+    <title>Science Student Personal Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,9 +13,11 @@
             background-color: #f4f4f4;
         }
         header {
-            background: #333;
+            background-image: url('img\JN_TATA.jpg');
+            background-size: cover;
+            background-position: center;
             color: #fff;
-            padding: 10px 0;
+            padding: 1rem 0;
             text-align: center;
         }
         .container {
@@ -23,58 +25,95 @@
             margin: auto;
             overflow: hidden;
         }
-        section {
-            padding: 20px;
-            margin: 20px 0;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .main-section {
+            padding: 2rem;
+            background-color: #fff;
+            margin: 2rem 0;
+        }
+        .main-section img {
+            max-width: 100%;
         }
         footer {
-            text-align: center;
-            padding: 10px;
-            background: #333;
+            background-color: #333;
             color: #fff;
+            text-align: center;
+            padding: 1rem 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Welcome to My Personal Website</h1>
-        </div>
-    </header>
 
-    <div class="container">
-        <section id="introduction">
-            <h2>About Me</h2>
-            <p>Hi! I'm [Your Name], a science student with a keen interest in astrophysics and quantum mechanics. Currently pursuing my studies at [Your University], I am passionate about understanding the universe and its underlying principles.</p>
-        </section>
+<header>
+    <h1>John Doe - Science Student</h1>
+</header>
 
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>Bachelor of Science in Physics - [Your University], Expected Graduation: [Year]</li>
-                <li>High School Diploma - [Your High School], [Year]</li>
-            </ul>
-        </section>
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Project 1: [Project Title] - A brief description of the project and its goals.</li>
-                <li>Project 2: [Project Title] - A brief description of the project and its goals.</li>
-                <li>Project 3: [Project Title] - A brief description of the project and its goals.</li>
-            </ul>
-        </section>
+<div class="container">
+    <section id="about" class="main-section">
+        <h2>About Me</h2>
+        <p>Hello! I am John Doe, a passionate science student currently studying astrophysics. I love exploring the mysteries of the universe and working on fascinating projects.</p>
+        <img src="path/to/your/photo.jpg" alt="John Doe">
+    </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to reach out via email at [Your Email Address] or connect with me on [Your LinkedIn Profile].</p>
-        </section>
-    </div>
+    <section id="education" class="main-section">
+        <h2>Education</h2>
+        <ul>
+            <li>Bachelor of Science in Astrophysics - XYZ University (Expected 2025)</li>
+            <li>High School Diploma - ABC High School (2021)</li>
+        </ul>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-    </footer>
+    <section id="projects" class="main-section">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <h3>UV Sky Simulation Project</h3>
+                <p>A project to simulate the ultraviolet sky using data from various sources. <a href="https://github.com/your-github-repo">GitHub Repository</a></p>
+                <img src="path/to/uv-sky-simulation.jpg" alt="UV Sky Simulation">
+            </li>
+            <li>
+                <h3>Stellar Spectra Analysis</h3>
+                <p>Analyzing stellar spectra to understand the composition and behavior of stars. <a href="https://your-website-link.com">Project Details</a></p>
+                <img src="path/to/stellar-spectra.jpg" alt="Stellar Spectra">
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact" class="main-section">
+        <h2>Contact</h2>
+        <p>You can reach me at:</p>
+        <ul>
+            <li>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/johndoe">linkedin.com/in/johndoe</a></li>
+            <li>GitHub: <a href="https://github.com/johndoe">github.com/johndoe</a></li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 John Doe. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
