@@ -1,140 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshank Tyagi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #e1dfdf;
-        }
-        header {
-            background-image: url('./img/JN_TATA.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 0.5rem 0;
-            text-align: right;
-        }
-        header img {
-            position: right;
-            left: 10px;
-            top: 10px;
-            height: 60px; /* Adjust the height as needed */
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        nav {
-            display: flex;
-            justify-content: space-around;
-            padding: 1rem;
-            background-color: #444;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .main-section {
-            padding: 2rem;
-            background-color: #fff;
-            margin: 2rem 0;
-        }
-        .main-section img {
-            /* max-width: 20%; */
-            width: 10vw;
-        }
-        .about{
-            display: flex;
-            justify-content: space-between;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>
-        <img src="./img/IISc_Master_Seal_white.png" alt="Logo"><br>
-        Akshank Tyagi &nbsp;
-    </h1>
-</header>
+    <header>
+        <h1>
+            <img src="./img/IISc_Master_Seal_white.png" alt="Logo"><br>
+            Akshank Tyagi &nbsp;
+        </h1>
+    </header>
 
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#about">About Me</a>
+        <!-- <a href="#education">Education</a> -->
+        <a href="#talks">Talks</a>
+        <a href="#projects">Projects</a>
+        <a href="#Photos">Photos</a>
+    </nav>
 
-<div class="container">
-    <section id="about" class="main-section">
-        <h2>About Me</h2>
-        <div class="about">
-            <div>
-                Hello! I am Akshank Tyagi, a passionate science student currently studying astrophysics. I love exploring the mysteries of the universe and working on fascinating projects.
+    <div class="container">
+        <section id="about" class="main-section">
+            <div class="about">
+                <div>
+                    <h2>About Me</h2>
+                    Hello! I am Akshank Tyagi, a 4<sup>th</sup> year Physics major undergrad @ IISc. <br>
+                    My interests lie in High Energy Astrophysics phenomenon and Cosmology. Also Particle physics studies
+                    that allow for better understanding of these fields. I am also Interested in transients and Compact
+                    Object studies (Theoretical or Computational modelling).
+                </div>
+                <div>
+                    <img src="./img/Profile_pic.jpg" alt="Akshank Tyagi">
+                    <!-- <img src="./img/Jaisalmer.jpg" alt="John Doe"> -->
+                </div>
             </div>
-            <div>
-                <img src="./img/Profile_pic.jpg" alt="Akshank Tyagi">
-                <!-- <img src="./img/Jaisalmer.jpg" alt="John Doe"> -->
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="education" class="main-section">
-        <h2>Education</h2>
-        <ul>
-            <li>Bachelor of Science in Astrophysics - XYZ University (Expected 2025)</li>
-            <li>High School Diploma - ABC High School (2021)</li>
-        </ul>
-    </section>
+        <section id="education" class="main-section">
+            <h2>Education</h2>
+            <ul>
+                <li> BS (Research) - IISc Bangalore (2021-2025)</li>
+                <li> High School - SRSM, Jindpur Delhi (2021)</li>
+            </ul>
+        </section>
 
-    <section id="projects" class="main-section">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <h3>UV Sky Simulation Project</h3>
-                <p>A project to simulate the ultraviolet sky using data from various sources. <a href="https://github.com/your-github-repo">GitHub Repository</a></p>
-                <img src="path/to/uv-sky-simulation.jpg" alt="UV Sky Simulation">
-            </li>
-            <li>
-                <h3>Stellar Spectra Analysis</h3>
-                <p>Analyzing stellar spectra to understand the composition and behavior of stars. <a href="https://your-website-link.com">Project Details</a></p>
-                <img src="path/to/stellar-spectra.jpg" alt="Stellar Spectra">
-            </li>
-        </ul>
-    </section>
+        <section id="projects" class="main-section">
+            <h2>Recent Works</h2>
+            <ul>
+                <li>
+                    <h3>UV Sky Simulation for Space missions</h3>
+                    <p> A General purpose simulation the ultraviolet sky using data from various sources. <a
+                            href="https://github.com/your-github-repo">GitHub Repository</a></p>
+                    <img id="SatSim" src="./img/satellite.gif" alt="UV Sky Simulation">
+                </li>
+                <li>
+                    <h3>Big Bang Nucleosynthesis</h3>
+                    <p>Analyzing stellar spectra to understand the composition and behavior of stars. <a
+                            href="https://your-website-link.com">Project Details</a></p>
+                    <img id = 'BBN' src="./img/BBN Temperatures.png" alt="Key Tempera">
+                    <img id = 'BBN' src="./img/Densities_advanced.png" alt="Key Tempera">
+                    <img id = 'BBN' src="./img/neutron-proton_ratio.png" alt="Key Tempera">
+                </li>
+            </ul>
+        </section>
 
-    <section id="contact" class="main-section">
-        <h2>Contact</h2>
-        <p>You can reach me at:</p>
-        <ul>
-            <li>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/johndoe">linkedin.com/in/johndoe</a></li>
-            <li>GitHub: <a href="https://github.com/johndoe">github.com/johndoe</a></li>
-        </ul>
-    </section>
-</div>
+        <section id="contact" class="main-section">
+            <h2>Contact</h2>
+            <p>You can reach me at:</p>
+            <ul>
+                <li>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/johndoe">linkedin.com/in/johndoe</a></li>
+                <li>GitHub: <a href="https://github.com/johndoe">github.com/johndoe</a></li>
+            </ul>
+        </section>
+    </div>
 
-<footer>
-    <p>&copy; 2024 John Doe. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
+    </footer>
 
 </body>
+
 </html>
