@@ -60,11 +60,16 @@ footer {
 }
 #SatSim{
     width: 60vw;
+    height: auto; 
+    /* display: block; */
+    /* margin: 0 auto; */
 }
 #BBN{
-    width: 20vw;
+    width: 23vw;
+    height: auto; 
+    display: block;
+    /* margin: 0 auto; */
 }
-
 .talk {
     margin-bottom: 20px;
     padding: 2rem;
@@ -89,9 +94,9 @@ footer {
     background: #555;
 }
 .center-img {
-    display: block;
+    /* display: block; */
     margin: 0 auto;
-    width: 30vw;
+    width: 23vw;
 }
 
 .project {
