@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshank Tyagi</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleContent(...ids) {
+            ids.forEach(id => {
+                var content = document.getElementById('more-content-' + id);
+                var btn = document.getElementById('show-more-btn-' + ids[0]);
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                    btn.innerHTML = "Show Less";
+                } else {
+                    content.style.display = "none";
+                    btn.innerHTML = "Show More";
+                }
+            });
+        }
+        </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <img src="./img/IISc_Master_Seal_white.png" alt="Logo"><br>
+            Akshank Tyagi &nbsp;
+        </h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <!-- <a href="#education">Education</a> -->
+        <a href="talks.html">Talks</a>
+        <a href="projects.html">Projects</a>
+        <a href="photos.html">Photos</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="main-section">
+            <div class="about">
+                <div>
+                    <h2>About Me</h2>
+                    Hello! I am Akshank Tyagi, a 5<sup>th</sup> year Physics undergrad @ IISc. <br>
+                    My interests lie in High-energy Astrophysics phenomenon, Dark matter phenomenology and early-universe Cosmology. 
+                    I am also Interested in Theoretical and Computational modelling of transients and Compact object studies.
+                </div>
+                <div>
+                    <img class= "profile_pic" src="./img/Profile_pic.jpg" alt="Akshank Tyagi">
+                    <!-- <img src="./img/Jaisalmer.jpg" alt="John Doe"> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="main-section">
+            <h2>Education</h2>
+            <ul>
+                <li> <b>BS - MS (Research):</b> Indian Institute of Science, Bangalore, India (2021-2026)</li>
+                <li> <b>High School:</b> SRSM, New Delhi, India (2021)</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="main-section">
+            <h2>Recent Works</h2><br>
+            <ul>
+                <li class = "section-title"> <span> Astroparticle Physics & Dark Matter phenomenology</span>
+                    <ol class="project-list"> 
+                        <li>
+                        <details>
+                            <summary>High-energy Cosmic rays from galaxy mergers </summary>
+                            <p></p> 
+                        </details>
+                        </li>
+                        <li>
+                        <details>
+                            <summary>QCD Axion search with Gravitational Microlensing</summary>
+                            <p>
+                                Axions can form miniclusters in the early universe and still be present in our galactic halo.These axion miniclusters can act as gravitational lenses.
+                                When a minicluster passes in front of a distant star, it can cause a temporary increase in the star's brightness, known as a microlensing event.
+                            </p>
+                            <img src="./img/Microlensing.gif" alt="Microlensing Simulation", width = "60%">
+                            <p> A gravitational microlensing event simulation on python with multiple impact parameters</p>
+                        </details>
+                        </li>
+                    </ol>
+                </li>
+
+
+                <li class="section-title"> <span> Cosmology</span>
+                    <ol class="project-list"> 
+                        <li>
+                        <details>
+                            <summary>Statistical Isotropy Violations in CMB</summary>
+                            <p>
+                                BipoSH (Bipolar Spherical Harmonics) implemented in harmonic space provides a general formalism
+                                for quantifying the departure from statistical isotropy for a field on a 2D sphere.
+                                The related complementary approach in real space can help ferret out the nature of SI violation signals.
+                            </p>
+                        </details>
+                        </li>
+                        <li>
+                        <details>
+                            <summary>Big Bang Nucleosynthesis</summary>
+                            <p>
+                                Big Bang Nucleosynthesis (BBN) is the process that formed the lightest elements in the early universe.
+                                It occurred within the first few minutes after the Big Bang when the universe was hot and dense enough for nuclear reactions to take place.
+                                The primary elements produced during BBN were hydrogen, helium, and small amounts of lithium and beryllium.
+                                The relative abundances of these light elements provide important evidence for the Big Bang theory and help constrain cosmological models.
+                            </p>
+                            <img src="./img/BBN_merged_image.png" alt="Plots related to BBN" width = "100%">
+                            <!-- <embed src="./img/BBN_merged_image.pdf" type="application/pdf" width="100%" height="285px" />  -->
+                            <p> (a): Key Temperatures needed for BBN vs Photon to baryon ratio. (b): Densities of Universe Constituents with Inverse Scale factor [a<sup>-1</sup>]. (c): Neutron-Proton Ratio with Inverse Temperature [z = 0.511/T(MeV)]</p>
+                        </details>
+                        </li>
+                    </ol>
+                </li>
+
+                <li class = "section-title"> <span> UV Astronomy </span>
+                    <ol class="project-list"> 
+                        <li>
+                        <details>
+                            <summary>UV Transients: Simulating Flares in M dwarf stars</summary>
+                        </details>
+                        </li>
+                        <li><details>
+                            <summary>UVS3: UV Sky Simulation for Satellite missions</summary>
+                            <p> A General purpose Satellite orbit and FOV Simulation for ultraviolet Spectroscopy. <br>
+                                <a href="https://github.com/AkshankTyagi/UV-Sky-Simulations-Backup">GitHub Repository</a> </p>
+                            <img id="SatSim" src="./img/ISS_satellite.gif" alt="UV Sky Simulation">
+                            <figcaption>ISS satellite: 2&deg; X 0.5&deg; FOV, Diffused UV background and Stellar Spectra </figcaption>
+                        </details></li>
+                    </ol>
+                    
+                </li><br>
+            </ul>     
+
+        </section>
+
+        <section id="contact" class="main-section">
+            <h2>Connect with me</h2>
+            <ul>
+                <li>Emails:<br><a href="mailto:akshanktyagi@iisc.ac.in">akshanktyagi@iisc.ac.in</a>, <a href="mailto:akshank101@gmail.com">akshank101@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/akshank-tyagi-09611b219">LinkedIn</a></li>
+                <li><a href="https://github.com/AkshankTyagi">GitHub</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Akshank Tyagi. All rights reserved.</p>
+        <p>JN Tata Startrails- &copy; Astrae, Captured by Me and Gaurav Rachh</p>
+    </footer>
+
+<!-- <script src="script.js"></script> -->
+
+</body>
+
+</html>

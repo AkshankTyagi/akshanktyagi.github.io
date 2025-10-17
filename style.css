@@ -51,24 +51,96 @@ nav a:hover {
 .about{
     display: flex;
     justify-content: space-between;
+    align-items: center;   /* optional: vertically align text and image */
+    gap: 20px;
 }
+
+/* .section-title {
+    list-style: none;       /* optional: remove bullet if desired * 
+
+} */
+.section-title span {
+    font-size: 1.3rem;      /* bigger than normal text */
+    font-weight: 650;       /* bold */
+    margin-bottom: 1rem;  /* space between section title and nested ol */
+    border-bottom: 2px solid #333; /* underline */
+}
+.project-list { 
+    list-style: decimal; /* numbered list */
+    padding-left: 30px;
+    margin-bottom: 1.8rem; 
+}
+.project-list li {
+    margin-bottom: 0.5rem; /* smaller gap between list items */
+}
+.project-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    cursor: pointer; 
+}
+
+details {
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600; 
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    list-style: none;
+    GAP: 10px;
+    margin-bottom: 0rem;
+
+}
+
+/* Remove the default arrow */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Add a custom arrow using ::after */
+summary::after {
+    content: "V";
+    font-family: "Arial", sans-serif; /* thin, clean font */
+    font-weight: 300;                 /* light */
+    font-size: 1rem;
+    margin-left: 10px;                 /* closer to heading */
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+details[open] summary::after {
+    transform: rotate(-90deg);
+}
+
+/* Optional paragraph styling */
+details p {
+    margin: 0.5rem 0 0 0;
+    line-height: 1.5;
+    color: #444;
+}
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
 }
+
 #SatSim{
     width: 60vw;
     height: auto; 
     /* display: block; */
     /* margin: 0 auto; */
 }
-#BBN{
-    width: 23vw;
-    height: auto; 
-    display: block;
-    /* margin: 0 auto; */
+.center-img {
+    display: block;    /* makes margin auto work */
+    margin: 0 auto;    /* centers horizontally */
 }
 .talk {
     margin-bottom: 20px;
@@ -110,9 +182,7 @@ footer {
 .project p {
     color: #666;
 }
-.project img {
 
-}
 .project .date {
     font-weight: bold;
     color: #333;
@@ -140,4 +210,101 @@ footer {
     cursor: pointer;
     color: #007BFF;
     text-decoration: underline;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 16px;
+  padding: 16px;
+  margin-top: 10px;
+  border-top: 1px solid #ddd;
+}
+/* 
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+} */
+/* .image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+
+}
+.image-grid img:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.image-grid img:hover::after {
+  content: attr(alt);
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+} */
+
+/* .lightbox {
+  display: none;  Hidden by default 
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  cursor: zoom-out;
+} */
+
+.img-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.img-wrapper:hover::after {
+  content: attr(alt);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.05);
+  z-index: 2;
 }

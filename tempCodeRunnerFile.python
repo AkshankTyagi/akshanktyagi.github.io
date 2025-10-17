@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# NFW profile parameters
+rho_0 = 1.0  # Characteristic density (arbitrary units)
+r_s = 1.0    # Scale radius (arbitrary units)
+
+# Function to compute the NFW density profile
+def nfw_density_profile(r, rho_0, r_s):
+    return rho_0 / ((r / r_s) * (1 + r / r_s)**2)
+
+# Radial distance array
+r = np.linspace(0.01, 5, 1000)  # Avoid r=0 to prevent division by zero
+
+# Compute the density profile
+rho = nfw_density_profile(r, rho_0, r_s)
+
+# Plot the NFW density profile
+plt.figure(figsize=(10, 6))
+plt.plot(r, rho, label='NFW Profile')
+plt.xlabel('Radius $r$ (arbitrary units)')
+plt.ylabel('Density $\\rho(r)$ (arbitrary units)')
+plt.title('NFW Density Profile for Dark Matter Halos')
+plt.legend()
+plt.grid(True)
+plt.show()

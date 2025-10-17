@@ -6,6 +6,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Akshank Tyagi: Image Gallery</title>
         <link rel="stylesheet" href="style.css">
+        <!-- <script>
+            function toggleSection(header) {
+                const grid = header.nextElementSibling;
+                const arrow = header.querySelector('.arrow');
+                grid.classList.toggle('visible');
+                arrow.classList.toggle('rotate');
+            }
+        </script> -->
+        <!-- <script>
+            // Open lightbox with clicked image
+            document.querySelectorAll('.image-grid img').forEach(img => {
+                img.addEventListener('click', () => {
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.getElementById('lightbox-img');
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+                });
+            });
+
+            // Close lightbox when clicked
+            function closeLightbox() {
+                document.getElementById('lightbox').style.display = 'none';
+            }
+        </script> -->
     </head>
     
     <body>
@@ -24,6 +48,77 @@
             <a href="projects.html">Projects</a>
             <a href="photos.html">Photos</a>
         </nav>
+
+        <div class="container">
+
+            <div class="main-section">
+                <details>
+                    <summary><b>Astrophotography</b></summary>
+
+                    <br>
+                    <div class="image-grid">
+                    <!-- <div class="img-wrapper" alt="BBN Temperature Evolution">
+                        <img src="./img/BBN Temperatures.png" alt="Key Temperatures of universe vs Photon to baryon ratio">
+                    </div>
+
+                    <div class="img-wrapper" alt="Density vs Scale Factor">
+                        <img src="./img/Densities_advanced.png" alt="Densities of Universe Constituents with Inverse Scale factor">
+                    </div>
+
+                    <div class="img-wrapper" alt="n/p Ratio with Temperature">
+                        <img src="./img/neutron-proton_ratio.png" alt="Neutron-Proton Ratio with Inverse Temperature">
+                    </div> -->
+                    </div>
+                </details>
+            </div>
+
+            <div class="main-section">
+                <details>
+                    <summary><b>Travel Blog</b></summary>
+
+                    <br>
+                    <div class="image-grid">
+
+                    </div>
+                </details>
+            </div>
+
+            <div class="main-section">
+                <details>
+                    <summary><b>Conferences</b></summary>
+
+                    <br>
+                    <div class="image-grid">
+
+                    </div>
+                </details>
+            </div>
+
+            <div class="main-section">
+                <details>
+                    <summary><b>Interesting Plots</b></summary>
+
+                    <br>
+                    <div class="image-grid">
+                    <div class="img-wrapper" alt="Key Temperatures of universe vs Photon to baryon ratio">
+                        <img src="./img/BBN Temperatures.png" alt="Key Temperatures of universe vs Photon to baryon ratio">
+                    </div>
+
+                    <div class="img-wrapper" alt="Density vs Scale Factor">
+                        <img src="./img/Densities_advanced.png" alt="Densities of Universe Constituents with Inverse Scale factor">
+                    </div>
+
+                    <div class="img-wrapper" alt="Neutron-Proton Ratio with Inverse Temperature">
+                        <img src="./img/neutron-proton_ratio.png" alt="Neutron-Proton Ratio with Inverse Temperature">
+                    </div>
+                    </div>
+                </details>
+
+            </div>
+            
+
+        </div>
+
 
         <footer>
             <p>&copy; 2024 Akshank Tyagi. All rights reserved.</p>
