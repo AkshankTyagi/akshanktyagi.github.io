@@ -135,8 +135,9 @@ footer {
 #SatSim{
     width: 70vw;
     height: auto; 
-    /* display: block; */
-    /* margin: 0 auto; */
+    display: block; 
+    margin-left: -80px;
+    margin-right: auto;
 }
 .center {
   display: block;
